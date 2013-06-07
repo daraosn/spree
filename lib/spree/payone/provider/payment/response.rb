@@ -5,6 +5,7 @@ module Spree::PAYONE
       class Response
         attr_accessor :redirect_url
         attr_accessor :state
+        attr_accessor :response_messages
         
         def initialize(state, message, params = {}, options = {}, response_messages = {})
           @am_response = ActiveMerchant::Billing::Response.new(false, message, params, options)
